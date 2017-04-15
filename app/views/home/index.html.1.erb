@@ -1,0 +1,10 @@
+<form action="/write" method="POST">
+    <input type="text" name="title"> <br><br>
+    <textarea name="contents" rows="8"></textarea> <br>
+    <input type="submit" value="Save Post">
+</form>
+
+<% @posts.each do |post| %>
+    <a href="/show/<%=post.id%>"><%= post.id %>. <%= post.title %> </a></br>
+    <!-- <a href="/show?id=<%=post.id%>"><%= post.id %>. <%= post.title %> </a></br> -->
+<% end %>

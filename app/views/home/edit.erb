@@ -1,0 +1,5 @@
+<form action="/update/<%=@lion.id%>" method="POST">
+    <input type="text" name="title" value="<%= @lion.title %>"> <br><br>
+    <textarea name="contents" rows="8"><%= @lion.contents %> </textarea> <br>
+    <input type="submit" value="Update Post">
+</form>
