@@ -42,7 +42,8 @@
 
                 <h1 class="page-header">
                     다은이 일기장
-                    <small>이것저것</small>
+                    <small>이것저것 <%= @time %> </small>
+        
                 </h1>
                 
                 
@@ -52,12 +53,13 @@
                     <a href="/show/<%=post.id%>"><%= post.id %>.<%= post.title %></a>
                 </h2>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on post.date 데이터로</p>
+                <%= post.contents %>
+                <a class="btn btn-primary" href="/show/<%=post.id%>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <!--
                 <hr>
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
                 <hr>
-                <p><%= post.contents %></p>
-                <a class="btn btn-primary" href="/show/<%=post.id%>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-           
+                이미지 지움-->
                 <hr>
                 <% end %>
                 

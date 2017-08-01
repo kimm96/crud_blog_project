@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @posts = Post.all.order("id desc")
+    @time = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
   end
   
   def postpage
@@ -10,6 +11,7 @@ class HomeController < ApplicationController
     one_post = Post.new
     one_post.title =params["title"]
     one_post.contents = params["contents"]
+    # one_post.datentime = Date.today.to_datetime
     one_post.save
     redirect_to '/'
   end

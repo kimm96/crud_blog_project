@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string "title"
       t.text "contents"
       t.string "category"
-      
+      # t.date "datentime"
       
       t.timestamps null: false
     end
